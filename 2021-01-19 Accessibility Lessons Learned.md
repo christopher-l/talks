@@ -1,18 +1,6 @@
 % Accessibility: Lessons Learned
 % Christopher Lübbemeier
 
-<style type="text/css">
-  .reveal p {
-    text-align: left;
-  }
-  .reveal ul {
-    display: block;
-  }
-  .reveal ol {
-    display: block;
-  }
-</style>
-
 # Things to Avoid
 
 ## Don't Use Semantic Elements For Styling
@@ -58,28 +46,20 @@
     - `listbox` `option`
 
 
-# How To Improve Things
+# Things to Look Out For
 
-## Things to Look Out For
-
----
-
-Is the component usable via keyboard?
+## Is the component usable via keyboard?
 
 - Can all interactive elements be reached via <kbd>Tab</kbd>?
 - Does the order make sense?
 - Can the user control all interactive elements via keyboard?
 
----
-
-Are interactive elements correctly labelled?
+## Are interactive elements correctly labelled?
 
 - Check the accessibility name of focusable elements with the "Accessibility" tab in dev tools
 - Heading vs. `fieldset` / `group` vs. `label`
 
----
-
-Do non-textual elements have textual alternatives?
+## Do non-textual elements have textual alternatives?
 
 - Images
     - Often `alt=""` is appropriate
@@ -96,5 +76,26 @@ Non-interactive:
 Interactive:
 
 - Label the interactive elements directly
+
+# Rules of Thumb
+
+## Make Your UI Explicit
+
+- When you think you need an `aria-label`, you might be missing a visible label
+
+## Use Elements for What They Are Made for
+
+---
+
+> But I need a click handler on this element, that is not a button
+
+- You will have to take care of
+  - Cursor style
+  - Tabindex
+  - Aria role
+  - Focus styling
+  - Label
+  - Disabled state
+- Users might not notice that they can click on your element
 
 # Thank You
