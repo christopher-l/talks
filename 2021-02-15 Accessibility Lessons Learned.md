@@ -1,5 +1,6 @@
 % Accessibility: Lessons Learned
 % Christopher Lübbemeier
+% 2021-02-15
 
 # Things to Avoid
 
@@ -8,15 +9,15 @@
 ## `link` Vs. `pushbutton` Vs. `div`
 
 - `<a href="">` (`role="link"`)
-    - Has a target URL
-    - Cannot be disabled
+  - Has a target URL
+  - Cannot be disabled
 - `<button>` (`role="pushbutton"`)
-    - Does not change `window.location`  
-        - Except maybe parameters
-    - Can be disabled
+  - Does not change `window.location`
+    - Except maybe parameters
+  - Can be disabled
 - `div` / `span` / ... (no `role` )
-    - Non-interactive
-    - Appropriate as a "disabled link"
+  - Non-interactive
+  - Appropriate as a "disabled link"
 
 ---
 
@@ -35,7 +36,7 @@
 
 ## When (Not) to Use Aria
 
-- Used to change semantics of HTML elements to something *else*
+- Used to change semantics of HTML elements to something _else_
 - Avoid if possible
 
 ## `aria-label`
@@ -43,8 +44,7 @@
 - Substitutes `<label for="">`
 - Only for interactive elements
 - Can cause unexpected behavior when not used properly
-    - `listbox` `option`
-
+  - `listbox` `option`
 
 # Things to Look Out For
 
@@ -62,7 +62,7 @@
 ## Do non-textual elements have textual alternatives?
 
 - Images
-    - Often `alt=""` is appropriate
+  - Often `alt=""` is appropriate
 - Icons
 - Color pickers
 
