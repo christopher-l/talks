@@ -1,0 +1,17 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "pandoc",
+            "type": "shell",
+            "command": "pandoc -i -t revealjs -s \"${file}\" -o \"${fileBasenameNoExtension}.html\" --css custom.css -V theme=black",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
