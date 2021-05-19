@@ -7,6 +7,14 @@
 }
 
 .reveal blockquote {
-    width: 100%;
-    padding: 0 20px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.reveal code {
+  font-size: .9em;
+  border: #fff3 solid 2px;
+  background-color: #fff1;
+  padding: 0 5px;
+  border-radius: 8px;
 }
